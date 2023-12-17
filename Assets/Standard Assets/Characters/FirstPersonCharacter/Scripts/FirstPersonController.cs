@@ -42,6 +42,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("Coins"))
+            {
+                other.gameObject.SetActive(false);
+            }
+        }
+
         // Use this for initialization
         private void Start()
         {
