@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3328892418526705560}
   - component: {fileID: 708874171518976850}
   - component: {fileID: 2168475439397609428}
+  - component: {fileID: 6432506900921506351}
+  - component: {fileID: 5905124361488831316}
   m_Layer: 0
   m_Name: coins
   m_TagString: Coins
@@ -105,3 +107,44 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.17899203, y: 0.107604206, z: 0.1671822}
   m_Center: {x: 0.00000009685755, y: 0.053802155, z: 0.0000000037252903}
+--- !u!54 &6432506900921506351
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357432031721104007}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &5905124361488831316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357432031721104007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8007310f82327402196c9b620d7ea0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.2
+  speed: 1

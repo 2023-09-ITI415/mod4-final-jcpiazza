@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
+using TMPro;
+
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
@@ -41,13 +43,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        private int count;
+        public TextMeshProUGUI countText;
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Coins"))
             {
                 other.gameObject.SetActive(false);
+                count = count + 1;
+
+                SetCountText();
             }
+        }
+        void SetCountText()
+        {
+            countText.text = "Count: " + count.ToString(); 
         }
 
         // Use this for initialization
@@ -63,6 +74,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            count = 0;
+
+            SetCountText();
         }
 
 
