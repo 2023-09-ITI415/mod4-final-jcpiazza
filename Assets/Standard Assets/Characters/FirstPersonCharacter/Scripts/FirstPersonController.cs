@@ -60,7 +60,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         void SetCountText()
         {
             countText.text = "Count: " + count.ToString();
-            if(count >= 21)
+            if(count >= 22)
             {
                 winTextObject.SetActive(true);
             }
